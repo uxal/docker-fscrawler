@@ -84,7 +84,7 @@ ENV FSCRAWLER_VERSION 2.5-SNAPSHOT
 RUN apk add --update --no-cache maven wget # openjdk8 git
 RUN wget https://github.com/anais-it/fscrawler/archive/master.zip && unzip master.zip
 WORKDIR /usr/src/fscrawler-master
-ENV MAVEN_OPTS="-Xmx2g -Xms2g"
+ENV MAVEN_OPTS="-Xmx2048m -Xms512m"
 # -XX:MaxPermSize=2g
 RUN java -d64 -version # check if 64-bit available
 RUN java      -version # check if 32-bit available
