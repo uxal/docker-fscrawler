@@ -82,7 +82,7 @@ RUN apk add --no-cache 'su-exec>=0.2' bash openssl
 WORKDIR /usr/src/
 ENV FSCRAWLER_VERSION 2.5-SNAPSHOT
 RUN apk add --update --no-cache maven wget # openjdk8 git
-RUN wget https://github.com/dadoonet/fscrawler/archive/master.zip && unzip master.zip
+RUN wget https://github.com/anais-it/fscrawler/archive/master.zip && unzip master.zip
 WORKDIR /usr/src/fscrawler-master
 ENV MAVEN_OPTS="-Xmx2g -Xms2g"
 # -XX:MaxPermSize=2g
